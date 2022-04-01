@@ -14,6 +14,9 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm install'
+        sh '$MONGO_URI=mongodb://adminuser:password123@mongo-nodeport-svc:27017/real-app?authSource=admin'
+        sh '$NODE_ENV=production'
+        sh '$SECRET=secret'
       }
     }  
     
