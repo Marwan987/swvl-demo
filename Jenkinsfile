@@ -13,7 +13,7 @@ pipeline {
      
     stage('Build') {
             environment {
-                MONGO_URI = "mongodb://adminuser:password123@mongo-nodeport-svc:27017/real-app?authSource=admin"
+                MONGODB_URI = "mongodb://adminuser:password123@mongo-nodeport-svc:27017/real-app?authSource=admin"
                 NODE_ENV = "production"
                 SECRET = "secret"
             }
