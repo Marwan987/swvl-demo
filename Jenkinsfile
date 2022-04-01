@@ -24,6 +24,7 @@ pipeline {
             image 'mongo'
             args '--name realworld-mongo -p 27017:27017 & sleep 10'
         }
+       }
       steps {
         sh 'node app.js'
         sh 'npm test'
@@ -31,4 +32,4 @@ pipeline {
     }
   }
 }
-}
+
