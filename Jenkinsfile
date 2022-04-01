@@ -13,8 +13,7 @@ pipeline {
      
     stage('Build') {
       steps {
-        sh 'docker run --name realworld-mongo -p 27017:27017 mongo & sleep 60'
-        sh 'docker stop realworld-mongo && docker rm realworld-mongo'
+        sh 'docker run --name realworld-mongo -p 27017:27017 mongo & sleep 10'
         sh "printenv"
         sh 'npm install'
         sh 'node app.js'
