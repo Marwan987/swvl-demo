@@ -13,7 +13,7 @@ pipeline {
      
     stage('Build') {
       steps {
-        sh 'sudo ocker run --name realworld-mongo -p 27017:27017 mongo & sleep 10'
+        docker.image('mongo').withRun('--name realworld-mongo -p 27017:27017')
         sh "printenv"
         sh 'npm install'
         sh 'node app.js'
