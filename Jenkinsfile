@@ -18,13 +18,15 @@ pipeline {
     }  
     
             
-    stage('Test') {
+    stage('prep') {
     agent {
         docker {
             image 'mongo'
             args '--name realworld-mongo -p 27017:27017 & sleep 10'
         }
-       }
+    }
+  }
+    stage('Test') {
       steps {
         sh 'node app.js'
         sh 'npm test'
