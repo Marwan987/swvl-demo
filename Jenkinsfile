@@ -7,14 +7,14 @@ pipeline {
         
     stage('Git') {
       steps {
-        git 'https://github.com/****/****'
+        git 'https://github.com/Marwan987/swvl-demo'
       }
     }
      
     stage('Build') {
       steps {
         sh 'npm install'
-         sh '<<Build Command>>'
+         sh 'node app.js'
       }
     }  
     
