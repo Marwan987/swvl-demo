@@ -13,16 +13,19 @@ pipeline {
      
     stage('Build') {
       steps {
-        docker.image('mongo').withRun('--name realworld-mongo -p 27017:27017') { }
-        sh "printenv"
         sh 'npm install'
-        sh 'node app.js'
       }
     }  
     
             
     stage('Test') {
+    agent {
+        docker {
+            image 'mongo'
+            args '--name realworld-mongo -p 27017:27017 & sleep 10'
+        }
       steps {
+        sh 'node app.js'
         sh 'npm test'
       }
     }
