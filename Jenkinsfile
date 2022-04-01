@@ -18,6 +18,8 @@ pipeline {
                 SECRET = "secret"
             }
       steps {
+        sh 'env.MONGODB_URI = "mongodb://adminuser:password123@mongo-nodeport-svc:27017/real-app?authSource=admin"'
+        sh "printenv"
         sh 'npm install'
         sh 'node app.js'
       }
