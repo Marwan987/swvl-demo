@@ -13,23 +13,17 @@ pipeline {
      
     stage('Build') {
       steps {
+        sh 'docker run --name realworld-mongo -p 27017:27017 mongo & sleep 10'
         sh 'npm install'
+        sh 'node app.js'
       }
     }  
     
             
-    stage('prep') {
-    agent {
-        docker {
-            image 'mongo'
-            args '--name realworld-mongo -p 27017:27017 & sleep 10'
-        }
-    }
-  }
     stage('Test') {
       steps {
-        sh 'node app.js'
         sh 'npm test'
+        sh 'docker stop realworld-mongo && docker rm realworld-mongo'
       }
     }
   }
