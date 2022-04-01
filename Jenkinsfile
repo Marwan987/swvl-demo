@@ -22,7 +22,8 @@ pipeline {
             
     stage('Test') {
       steps {
-        sh 'npm test'
+        sh 'npm test'  
+        sh 'lsof -ti :3000 | xargs kill'
         sh 'docker stop realworld-mongo && docker rm realworld-mongo'
       }
     }
