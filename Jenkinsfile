@@ -28,7 +28,7 @@ pipeline {
     }
     stage('Publish') {
       steps {
-        withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://hub.docker.com/repository/docker/marwanaf/real-app') {
+        withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://index.docker.io/v1/') {
           sh  'docker build -t marwanaf/real-app:test . '
           sh  'docker push'
           }
