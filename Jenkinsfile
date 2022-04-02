@@ -26,6 +26,14 @@ pipeline {
         sh 'docker stop realworld-mongo && docker rm realworld-mongo'
       }
     }
+    stage('Publish') {
+      steps {
+        withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://hub.docker.com/repository/docker/marwanaf/real-app') {
+            docker build -t marwanaf/real-app:test .
+            docker push
+          }
+      }
+    }
   }
 }
 
