@@ -30,7 +30,7 @@ pipeline {
       steps {
         withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://index.docker.io/v1/') {
           sh  'docker build -t marwanaf/real-app:test . '
-          sh  'docker push'
+          sh  'docker push marwanaf/real-app:test'
           }
       }
     }
