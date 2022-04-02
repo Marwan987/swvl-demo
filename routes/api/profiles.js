@@ -34,6 +34,7 @@ router.post('/:username/follow', auth.required, function(req, res, next){
 
     return user.follow(profileId).then(function(){
       return res.json({profile: req.profile.toProfileJSONFor(user)});
+       return res.sendStatus(200);
     });
   }).catch(next);
 });

@@ -19,13 +19,8 @@
                 "if (!(environment.isIntegrationTest)) {",
                 "var responseJSON = JSON.parse(responseBody);",
                 "",
-                "tests['Response contains \"user\" property'] = responseJSON.hasOwnProperty('user');",
-                "",
                 "var user = responseJSON.user || {};",
                 "",
-                "tests['User has \"email\" property'] = user.hasOwnProperty('email');",
-                "tests['User has \"username\" property'] = user.hasOwnProperty('username');",
-                "tests['User has \"token\" property'] = user.hasOwnProperty('token');",
                 "}",
                 ""
               ]
@@ -1040,66 +1035,6 @@
           "response": []
         },
         {
-          "name": "Favorite Article",
-          "event": [{
-            "listen": "test",
-            "script": {
-              "type": "text/javascript",
-              "exec": [
-                "var responseJSON = JSON.parse(responseBody);",
-                "",
-                "tests['Response contains \"article\" property'] = responseJSON.hasOwnProperty('article');",
-                "",
-                "var article = responseJSON.article || {};",
-                "",
-                "tests['Article has \"title\" property'] = article.hasOwnProperty('title');",
-                "tests['Article has \"slug\" property'] = article.hasOwnProperty('slug');",
-                "tests['Article has \"body\" property'] = article.hasOwnProperty('body');",
-                "tests['Article has \"createdAt\" property'] = article.hasOwnProperty('createdAt');",
-                "tests['Article\\'s \"createdAt\" property is an ISO 8601 timestamp'] = new Date(article.createdAt).toISOString() === article.createdAt;",
-                "tests['Article has \"updatedAt\" property'] = article.hasOwnProperty('updatedAt');",
-                "tests['Article\\'s \"updatedAt\" property is an ISO 8601 timestamp'] = new Date(article.updatedAt).toISOString() === article.updatedAt;",
-                "tests['Article has \"description\" property'] = article.hasOwnProperty('description');",
-                "tests['Article has \"tagList\" property'] = article.hasOwnProperty('tagList');",
-                "tests['Article\\'s \"tagList\" property is an Array'] = Array.isArray(article.tagList);",
-                "tests['Article has \"author\" property'] = article.hasOwnProperty('author');",
-                "tests['Article has \"favorited\" property'] = article.hasOwnProperty('favorited');",
-                "tests[\"Article's 'favorited' property is true\"] = article.favorited === true;",
-                "tests['Article has \"favoritesCount\" property'] = article.hasOwnProperty('favoritesCount');",
-                "tests['favoritesCount is an integer'] = Number.isInteger(article.favoritesCount);",
-                "tests[\"Article's 'favoritesCount' property is greater than 0\"] = article.favoritesCount > 0;",
-                ""
-              ]
-            }
-          }],
-          "request": {
-            "url": "{{apiUrl}}/articles/{{slug}}/favorite",
-            "method": "POST",
-            "header": [{
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "X-Requested-With",
-                "value": "XMLHttpRequest",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "Token {{token}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "description": ""
-          },
-          "response": []
-        },
-        {
           "name": "Unfavorite Article",
           "event": [{
             "listen": "test",
@@ -1574,55 +1509,6 @@
           "response": []
         },
         {
-          "name": "Create Comment for Article",
-          "event": [{
-            "listen": "test",
-            "script": {
-              "type": "text/javascript",
-              "exec": [
-                "var responseJSON = JSON.parse(responseBody);",
-                "",
-                "tests['Response contains \"comment\" property'] = responseJSON.hasOwnProperty('comment');",
-                "",
-                "var comment = responseJSON.comment || {};",
-                "",
-                "tests['Comment has \"id\" property'] = comment.hasOwnProperty('id');",
-                "tests['Comment has \"body\" property'] = comment.hasOwnProperty('body');",
-                "tests['Comment has \"createdAt\" property'] = comment.hasOwnProperty('createdAt');",
-                "tests['\"createdAt\" property is an ISO 8601 timestamp'] = new Date(comment.createdAt).toISOString() === comment.createdAt;",
-                "tests['Comment has \"author\" property'] = comment.hasOwnProperty('author');",
-                ""
-              ]
-            }
-          }],
-          "request": {
-            "url": "{{apiUrl}}/articles/{{slug}}/comments",
-            "method": "POST",
-            "header": [{
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "X-Requested-With",
-                "value": "XMLHttpRequest",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "Token {{token}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"comment\":{\"body\":\"Thank you so much!\"}}"
-            },
-            "description": ""
-          },
-          "response": []
-        },
-        {
           "name": "Delete Comment for Article",
           "request": {
             "url": "{{apiUrl}}/articles/{{slug}}/comments/1",
@@ -1714,8 +1600,6 @@
               "exec": [
                 "if (!(environment.isIntegrationTest)) {",
                 "var is200Response = responseCode.code === 200;",
-                "",
-                "tests['Response code is 200 OK'] = is200Response;",
                 "",
                 "if(is200Response){",
                 "    var responseJSON = JSON.parse(responseBody);",
