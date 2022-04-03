@@ -29,13 +29,13 @@ pipeline {
 
     stage('Push') {
       environment {
-        registry = 'marwan-docker'
+        registryCredential = 'marwan-docker'
       }
    steps {
         script {
-          commitId = sh(returnStdout: true, script: 'git rev-parse --short HEAD')
+          commitId = '555'
           def appimage = docker.build real-app + ":" + commitId.trim()
-          docker.withRegistry( 'https://index.docker.io/v1/', registry ) {
+          docker.withRegistry( 'https://index.docker.io/v1/', registryCredential ) {
             appimage.push()
             if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'release') {
               appimage.push('latest')
