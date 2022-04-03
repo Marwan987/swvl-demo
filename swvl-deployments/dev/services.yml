@@ -4,13 +4,6 @@ metadata:
   name: real-app
   namespace: real-app-dev
 spec:
-  clusterIP: 10.72.15.106
-  clusterIPs:
-  - 10.72.15.106
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - port: 3000
     protocol: TCP
