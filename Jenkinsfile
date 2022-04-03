@@ -26,16 +26,26 @@ pipeline {
         sh 'docker stop realworld-mongo && docker rm realworld-mongo'
       }
     }
-    stage('Deploy to Staging') {
+    stage('Deploy to DEV') {
       steps {
-          sh 'ls'
           step([$class: 'KubernetesEngineBuilder', 
                         projectId: "triple-voyage-278712",
                         clusterName: "swvl-cluster",
                         zone: "us-central1",
                         manifestPattern: 'swvl-deployments/dev',
                         credentialsId: "triple-voyage-278712",
-                        verifyDeployments: false])
+                        verifyDeployments: true])
+      }
+    }
+    stage('Deploy to PROD') {
+      steps {
+          step([$class: 'KubernetesEngineBuilder',
+                        projectId: "triple-voyage-278712",
+                        clusterName: "swvl-cluster",
+                        zone: "us-central1",
+                        manifestPattern: 'swvl-deployments/prod',
+                        credentialsId: "triple-voyage-278712",
+                        verifyDeployments: true])
       }
     }
   }
