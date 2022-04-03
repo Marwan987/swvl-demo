@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: real-app
-          image: marwanaf/real-app:test
+          image: marwanaf/real-app:latest
           ports:
             - containerPort: 3000
           env:

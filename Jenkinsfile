@@ -54,6 +54,9 @@ pipeline {
     
 
     stage('Deploy to DEV') {
+      when {
+        branch 'develop'
+      }
       steps {
           step([$class: 'KubernetesEngineBuilder', 
                         projectId: "triple-voyage-278712",
@@ -65,6 +68,9 @@ pipeline {
       }
     }
     stage('Deploy to PROD') {
+      when {
+        branch 'master'
+      }
       steps {
           step([$class: 'KubernetesEngineBuilder',
                         projectId: "triple-voyage-278712",
