@@ -34,7 +34,7 @@ pipeline {
                         zone: "us-central1",
                         manifestPattern: 'swvl-deployments/dev',
                         credentialsId: "triple-voyage-278712",
-                        verifyDeployments: true])
+                        verifyDeployments: false])
       }
     }
   }
