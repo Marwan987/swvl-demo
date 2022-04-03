@@ -34,7 +34,7 @@ pipeline {
    steps {
         script {
           commitId = sh(returnStdout: true, script: 'git rev-parse --short HEAD')
-          def appimage = docker.build imageName + ":" + commitId.trim()
+          def appimage = docker.build real-app + ":" + commitId.trim()
           docker.withRegistry( 'https://index.docker.io/v1/', registry ) {
             appimage.push()
             if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'release') {
