@@ -26,12 +26,15 @@ pipeline {
         sh 'docker stop realworld-mongo && docker rm realworld-mongo'
       }
     }
-    stage('Publish') {
+    stage('Deploy to Staging') {
       steps {
-        withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://index.docker.io/v1/') {
-          sh  'docker build -t marwanaf/real-app:test . '
-          sh  'docker push marwanaf/real-app:test'
-          }
+          step([$class: 'KubernetesEngineBuilder', 
+                        projectId: "triple-voyage-278712",
+                        clusterName: "swvl-cluster",
+                        zone: "us-central1-a",
+                        manifestPattern: 'swvl-deployments/dev',
+                        credentialsId: "triple-voyage-278712",
+                        verifyDeployments: true])
       }
     }
   }
