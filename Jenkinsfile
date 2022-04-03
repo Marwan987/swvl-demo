@@ -31,7 +31,7 @@ pipeline {
           step([$class: 'KubernetesEngineBuilder', 
                         projectId: "triple-voyage-278712",
                         clusterName: "swvl-cluster",
-                        zone: "us-central1-a",
+                        zone: "us-central1",
                         manifestPattern: 'swvl-deployments/dev',
                         credentialsId: "triple-voyage-278712",
                         verifyDeployments: true])
