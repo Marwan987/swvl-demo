@@ -40,7 +40,7 @@ pipeline {
            def realappimage = docker.build dockerName + "/" + imageName + ":" + commitId.trim()
               if (env.BRANCH_NAME == 'master') {
                 realappimage.push('latest')
-                realappimage.push( "release-" + commitId )
+                realappimage.push( "release-" + commitId.trim() )
                 }
                
               if (env.BRANCH_NAME == 'develop') {
