@@ -20,7 +20,7 @@ spec:
             - containerPort: 3000
           env:
             - name: MONGODB_URI
-              value: mongodb://adminuser:password123@mongo-nodeport-svc:27017/real-app?authSource=admin
+              value: mongodb://adminuser:password123@mongo-nodeport-svc.default:27017/real-app?authSource=admin
             - name: NODE_ENV
               value: production
             - name: SECRET
