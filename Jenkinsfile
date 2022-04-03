@@ -30,6 +30,7 @@ pipeline {
     stage('Push') {
       environment {
         imageName = 'real-app'
+        dockerName = 'marwanaf'
       }
    steps {
         script {
