@@ -35,7 +35,7 @@ pipeline {
         script {
           commitId = '555'
           def appimage = docker.build real-app + ":" + commitId.trim()
-          docker.withRegistry( 'https://index.docker.io/v1/', registryCredential ) {
+          withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://index.docker.io/v1/') {
             appimage.push()
             if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'release') {
               appimage.push('latest')
