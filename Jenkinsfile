@@ -31,6 +31,7 @@ pipeline {
       environment {
         imageName = 'real-app'
         dockerName = 'marwanaf'
+        BRANCH_NAME = 'master'
       }
    steps {
         script {
