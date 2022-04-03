@@ -33,10 +33,8 @@ pipeline {
       }
    steps {
         script {
-          commitId = '555'
-          def appimage = docker.build real-app + ":" + commitId.trim()
           withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://index.docker.io/v1/') {
-            appimage.push()
+            app.push("${env.BUILD_NUMBER}")            
             if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'release') {
               appimage.push('latest')
               if (env.BRANCH_NAME == 'release') {
