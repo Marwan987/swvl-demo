@@ -8,7 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-origin: '*'
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$2
-  name: real-app
+  name: real-app-dev
   namespace: real-app-dev
 spec:
   rules:
@@ -19,5 +19,5 @@ spec:
             name: real-app
             port:
               number: 3000
-        path: /real(/|$)(.*)
+        path: /dev(/|$)(.*)
         pathType: Prefix

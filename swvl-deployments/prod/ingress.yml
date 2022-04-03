@@ -19,5 +19,5 @@ spec:
             name: real-app
             port:
               number: 3000
-        path: /real(/|$)(.*)
+        path: /prod(/|$)(.*)
         pathType: Prefix
