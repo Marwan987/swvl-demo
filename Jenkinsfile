@@ -39,8 +39,6 @@ pipeline {
           }
          }
        }
-     }
-   }
     
     stage('Deploy to DEV') {
       steps {
