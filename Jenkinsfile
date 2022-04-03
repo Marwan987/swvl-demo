@@ -30,16 +30,23 @@ pipeline {
     stage('Push') {
       environment {
         registryCredential = 'marwan-docker'
+        imageName = 'real-app'
       }
    steps {
         script {
+          def appimage = docker.build imageName + ":" + "aykalam"
           withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://index.docker.io/v1/') {
-              sh 'docker  build -t marwanaf/real-app:dev .'
-              }
+           appimage.push()
+              if (env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'release') {
+                appimage.push('latest')
+                if (env.BRANCH_NAME == 'release') {
+                  appimage.push("release-" + "12345")
+                }
           }
          }
        }
-    
+    }
+}
     stage('Deploy to DEV') {
       steps {
           step([$class: 'KubernetesEngineBuilder', 
