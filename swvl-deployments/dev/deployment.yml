@@ -27,4 +27,4 @@ spec:
               value: secret
           imagePullPolicy: Always
       imagePullSecrets:
-      - name: regcred
+      - name: regcred-dev
