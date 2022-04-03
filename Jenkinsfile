@@ -26,6 +26,26 @@ pipeline {
         sh 'docker stop realworld-mongo && docker rm realworld-mongo'
       }
     }
+
+    stage('Push') {
+      environment {
+        registry = 'marwan-docker'
+      }
+        script {
+          commitId = sh(returnStdout: true, script: 'git rev-parse --short HEAD')
+          def appimage = docker.build imageName + ":" + commitId.trim()
+          docker.withRegistry( 'https://index.docker.io/v1/', registry ) {
+            appimage.push()
+            if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'release') {
+              appimage.push('latest')
+              if (env.BRANCH_NAME == 'release') {
+                appimage.push("release-" + "${COMMIT_SHA}")
+              }
+          }
+         }
+       }
+     }
+    }
     stage('Deploy to DEV') {
       steps {
           step([$class: 'KubernetesEngineBuilder', 
