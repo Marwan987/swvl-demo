@@ -31,6 +31,7 @@ pipeline {
       environment {
         registry = 'marwan-docker'
       }
+   steps {
         script {
           commitId = sh(returnStdout: true, script: 'git rev-parse --short HEAD')
           def appimage = docker.build imageName + ":" + commitId.trim()
@@ -45,6 +46,7 @@ pipeline {
          }
        }
      }
+   }
     
     stage('Deploy to DEV') {
       steps {
