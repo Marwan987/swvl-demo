@@ -34,8 +34,8 @@ pipeline {
    steps {
         script {
           commitId = sh(returnStdout: true, script: 'git rev-parse --short HEAD')
-          def appimage = docker.build imageName + ":" + commitId.trim()
           withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://index.docker.io/v1/') {
+           def appimage = docker.build dockerName + "/" + imageName + ":" + commitId.trim()
            appimage.push()
               if (env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'release') {
                 appimage.push('latest')
