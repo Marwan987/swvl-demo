@@ -28,7 +28,7 @@ pipeline {
     }
     stage('Deploy to Staging') {
       steps {
-          checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'marwan3', url: 'git@github.com:Marwan987/swvl-demo.git']]])
+          sh 'ls'
           step([$class: 'KubernetesEngineBuilder', 
                         projectId: "triple-voyage-278712",
                         clusterName: "swvl-cluster",
