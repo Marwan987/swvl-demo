@@ -37,7 +37,6 @@ pipeline {
           commitId = sh(returnStdout: true, script: 'git rev-parse --short HEAD')
           withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://index.docker.io/v1/') {
            def realappimage = docker.build dockerName + "/" + imageName + ":" + commitId.trim()
-           appimage.push()
               if (env.BRANCH_NAME == 'master') {
                 realappimage.push('latest')
                 realappimage.push("release-" + "${COMMIT_SHA}")
