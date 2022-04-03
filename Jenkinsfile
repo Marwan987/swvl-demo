@@ -34,11 +34,7 @@ pipeline {
    steps {
         script {
           withDockerRegistry(credentialsId: 'marwan-docker', url: 'https://index.docker.io/v1/') {
-            app.push("${env.BUILD_NUMBER}")            
-            if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'release') {
-              appimage.push('latest')
-              if (env.BRANCH_NAME == 'release') {
-                appimage.push("release-" + "${COMMIT_SHA}")
+              sh 'docker  build -t marwanaf/real-app:dev .'
               }
           }
          }
