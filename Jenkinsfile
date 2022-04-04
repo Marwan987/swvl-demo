@@ -19,16 +19,7 @@ pipeline {
             
     stage('Test') {
       steps {
-        sh 'docker run --name realworld-mongo -p 27017:27017 mongo & sleep 5'
-        sh 'npm start &'  
-        sh 'npm test'
-      }
-            post {
-                always {
-                     sh 'npm stop'
-                     sh 'docker stop realworld-mongo && docker rm realworld-mongo'
-                }
-            }
+       sh 'npm test'
     }
 
     stage('Push') {
@@ -70,7 +61,29 @@ pipeline {
                         verifyDeployments: true])
       }
     }
-    stage('Deploy to PROD') {
+    stage('Deploy to QA') {
+      when {
+        branch 'master'
+      }
+      steps {
+          step([$class: 'KubernetesEngineBuilder',
+                        projectId: "triple-voyage-278712",
+                        clusterName: "swvl-cluster",
+                        zone: "us-central1",
+                        manifestPattern: 'k8s/test',
+                        credentialsId: "triple-voyage-278712",
+                        verifyDeployments: true])
+      }
+    
+            post {
+                success {
+                    newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json
+
+                }
+            }
+   }
+
+    }iistage('Deploy to PROD') {
       when {
         branch 'master'
       }
