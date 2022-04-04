@@ -78,7 +78,7 @@ pipeline {
     
             post {
                 success {
-                    newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json
+                   sh 'newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json'
 
                 }
             }
