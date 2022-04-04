@@ -84,7 +84,7 @@ pipeline {
             }
    }
 
-    }iistage('Deploy to PROD') {
+    stage('Deploy to PROD') {
       when {
         branch 'master'
       }
