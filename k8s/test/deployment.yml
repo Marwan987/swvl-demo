@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: real-app
+  namespace: real-app-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: real-app
+  template:
+    metadata:
+      labels:
+        app: real-app
+    spec:
+      containers:
+        - name: real-app
+          image: marwanaf/real-app:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGODB_URI
+              valueFrom:
+               secretKeyRef:
+                name: mongoconnection
+                key: mongo-connection
+            - name: NODE_ENV
+              value: production
+            - name: SECRET
+              value: secret
+          imagePullPolicy: Always
+      imagePullSecrets:
+      - name: regcred-dev
