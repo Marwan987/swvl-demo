@@ -30,4 +30,4 @@ spec:
               value: secret
           imagePullPolicy: Always
       imagePullSecrets:
-      - name: regcred-dev
+      - name: regcred-test
