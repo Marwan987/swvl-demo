@@ -9,7 +9,7 @@ pipeline {
         
     stage('Preparation') {
       steps { 
-                sh 'echo 'Pulling... ' + env.GIT_BRANCH'
+                echo 'env.GIT_BRANCH' 
                 sh 'env'
 		checkout([$class: 'GitSCM', branches: [[name: '*/$BRANCH_NAME']], extensions: [], userRemoteConfigs: [[credentialsId: 'marwan3', url: 'git@github.com:Marwan987/swvl-demo.git']]])
       }
