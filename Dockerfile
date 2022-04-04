@@ -1,33 +1,32 @@
-FROM node:16.3.0-alpine AS base
-RUN mkdir -p /home/node/app
-RUN chown -R node:node /home/node && chmod -R 770 /home/node
-WORKDIR /home/node/app
+#
+# ---- Base Node ----
+FROM node:16-alpine AS base
+# install node
+RUN apk add --no-cache nodejs-current 
+# set working directory
+WORKDIR  /usr/src/app
+# copy project file
+COPY package.json .
 
-FROM base AS builder-server
-WORKDIR /home/node/app
-RUN apk add --no-cache --virtual .build-deps git make python g++
-COPY --chown=node:node ./package.json ./package.json
-COPY --chown=node:node ./package-lock.json ./package-lock.json
-USER node
-RUN npm install --loglevel warn --production
+#
+# ---- Dependencies ----
+FROM base AS dependencies
+# install node packages
+RUN npm set progress=false && npm config set depth 0
+RUN npm install --only=production 
+# copy production node_modules aside
+RUN cp -R node_modules prod_node_modules
+# install ALL node_modules, including 'devDependencies'
+RUN npm install
 
-FROM builder-server AS builder-client
-WORKDIR /home/node/app
-COPY --chown=node:node . ./
-USER node
-RUN npm install --loglevel warn && npm run build
+
+#
+# ---- Release ----
+FROM base AS release
+# copy production node_modules
+COPY --from=dependencies  /usr/src/app/prod_node_modules ./node_modules
+# copy app sources
+COPY . .
+# expose port and define CMD
 EXPOSE 3000
-CMD ["npm", "run", "dev"]
-
-FROM base AS production
-WORKDIR /home/node/app
-USER node
-COPY --chown=node:node --from=builder-client /home/node/app/dist ./dist/
-COPY --chown=node:node --from=builder-server /home/node/app/node_modules ./node_modules
-COPY --chown=node:node ./package.json ./package.json
-COPY --chown=node:node ./package-lock.json ./package-lock.json
-COPY --chown=node:node ./assets ./assets
-COPY --chown=node:node ./bin ./bin
-COPY --chown=node:node ./src ./src
-EXPOSE 3000
-CMD ["node", "app.js"]
+CMD node app.js
