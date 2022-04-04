@@ -1,7 +1,5 @@
-#
 # ---- Base Node ----
 FROM node:16-alpine AS base
-# install node
 RUN apk add --no-cache nodejs-current 
 # set working directory
 WORKDIR  /usr/src/app

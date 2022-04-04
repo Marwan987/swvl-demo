@@ -58,7 +58,7 @@ pipeline {
                         zone: "us-central1",
                         manifestPattern: 'k8s/dev',
                         credentialsId: "triple-voyage-278712",
-                        verifyDeployments: true])
+                        verifyDeployments: false])
       }
     }
     stage('Deploy to QA') {
@@ -72,7 +72,7 @@ pipeline {
                         zone: "us-central1",
                         manifestPattern: 'k8s/test',
                         credentialsId: "triple-voyage-278712",
-                        verifyDeployments: true])
+                        verifyDeployments: false])
       }
     
             post {
@@ -94,7 +94,7 @@ pipeline {
                         zone: "us-central1",
                         manifestPattern: 'k8s/prod',
                         credentialsId: "triple-voyage-278712",
-                        verifyDeployments: true])
+                        verifyDeployments: false])
       }
     }
   }
