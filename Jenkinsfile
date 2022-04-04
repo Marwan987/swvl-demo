@@ -6,8 +6,7 @@ pipeline {
         
     stage('Preparation') {
       steps { 
-                sh 'env'
-		checkout([$class: 'GitSCM', branches: [[name: '*/$GIT_BRANCH']], extensions: [], userRemoteConfigs: [[credentialsId: 'marwan3', url: 'git@github.com:Marwan987/swvl-demo.git']]])
+		checkout([$class: 'GitSCM', branches: [[name: '*/$BRANCH_NAME']], extensions: [], userRemoteConfigs: [[credentialsId: 'marwan3', url: 'git@github.com:Marwan987/swvl-demo.git']]])
       }
     }
      
