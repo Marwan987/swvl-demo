@@ -1,4 +1,4 @@
-FROM node:14-alpine AS base
+FROM node:16.3.0-alpine AS base
 RUN mkdir -p /home/node/app
 RUN chown -R node:node /home/node && chmod -R 770 /home/node
 WORKDIR /home/node/app
