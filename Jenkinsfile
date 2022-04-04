@@ -2,7 +2,6 @@ pipeline {
   agent any
    
     environment {
-          BRANCH_NAME = scm.branches[0].name.split("/")[1]
   }
     
   stages {
