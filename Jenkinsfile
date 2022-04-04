@@ -39,7 +39,6 @@ pipeline {
                 }
                
               if (env.BRANCH_NAME == 'develop') {
-                realappimage.push()
                 realappimage.push('dev')
                 }
            }
