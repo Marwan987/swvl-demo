@@ -79,7 +79,7 @@ pipeline {
             post {
                 success {
                    sh 'newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json'
-
+                   junit(testResults: 'newman/realapp.xml', allowEmptyResults : true)
                 }
             }
    }

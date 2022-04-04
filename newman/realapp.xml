@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Conduit API Tests" tests="31" time="1.097">
+  <testsuite name="Auth / Register" id="42c3cd4c-5d3a-4e6d-a542-162f87966fad" timestamp="2022-04-04T10:51:23.018Z" tests="0" failures="0" errors="0" time="0.240"/>
+  <testsuite name="Auth / Login" id="c46624bb-b2c1-4c32-8587-ec6f1f7c9fa5" timestamp="2022-04-04T10:51:23.018Z" tests="4" failures="0" errors="0" time="0.119">
+    <testcase name="Response contains &quot;user&quot; property" time="0.119" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;email&quot; property" time="0.119" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;username&quot; property" time="0.119" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;token&quot; property" time="0.119" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Auth / Login and Remember Token" id="178be9c7-cde8-4a90-9df7-0507d6bd5af8" timestamp="2022-04-04T10:51:23.018Z" tests="5" failures="0" errors="0" time="0.096">
+    <testcase name="Response contains &quot;user&quot; property" time="0.096" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;email&quot; property" time="0.096" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;username&quot; property" time="0.096" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;token&quot; property" time="0.096" classname="ConduitApiTests"/>
+    <testcase name="Environment variable &quot;token&quot; has been set" time="0.096" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Auth / Current User" id="3d001edc-0e9a-4d87-adf2-8ba183140b03" timestamp="2022-04-04T10:51:23.018Z" tests="4" failures="0" errors="0" time="0.016">
+    <testcase name="Response contains &quot;user&quot; property" time="0.016" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;email&quot; property" time="0.016" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;username&quot; property" time="0.016" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;token&quot; property" time="0.016" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Auth / Update User" id="e6de7e58-9722-46d6-bb6f-ad12375a2e54" timestamp="2022-04-04T10:51:23.018Z" tests="4" failures="0" errors="0" time="0.020">
+    <testcase name="Response contains &quot;user&quot; property" time="0.020" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;email&quot; property" time="0.020" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;username&quot; property" time="0.020" classname="ConduitApiTests"/>
+    <testcase name="User has &quot;token&quot; property" time="0.020" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Feed" id="503dfda5-9c05-4648-8cba-603853a8456a" timestamp="2022-04-04T10:51:23.018Z" tests="4" failures="0" errors="0" time="0.025">
+    <testcase name="Response code is 200 OK" time="0.025" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.025" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.025" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is 0 when feed is empty" time="0.025" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / All Articles" id="6c7e79d0-779c-47e5-90fe-e8a80dc18eba" timestamp="2022-04-04T10:51:23.018Z" tests="4" failures="0" errors="0" time="0.012">
+    <testcase name="Response code is 200 OK" time="0.012" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.012" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.012" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is 0 when feed is empty" time="0.012" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / All Articles with auth" id="7e4d9db6-b537-4db9-b569-79752cec095e" timestamp="2022-04-04T10:51:23.018Z" tests="4" failures="0" errors="0" time="0.091">
+    <testcase name="Response code is 200 OK" time="0.091" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.091" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.091" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is 0 when feed is empty" time="0.091" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles by Author" id="4419af5a-f86c-40d8-b58c-ad6823bf8336" timestamp="2022-04-04T10:51:23.018Z" tests="5" failures="0" errors="0" time="0.098">
+    <testcase name="Response code is 200 OK" time="0.098" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articles&quot; property" time="0.098" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.098" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.098" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is 0 when feed is empty" time="0.098" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles by Author with auth" id="f1ce6137-194b-439b-9164-78d8bcb31b2b" timestamp="2022-04-04T10:51:23.018Z" tests="5" failures="0" errors="0" time="0.013">
+    <testcase name="Response code is 200 OK" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articles&quot; property" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is 0 when feed is empty" time="0.013" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles Favorited by Username" id="be565f55-cdf2-4491-ba84-096be3c51022" timestamp="2022-04-04T10:51:23.018Z" tests="4" failures="0" errors="0" time="0.012">
+    <testcase name="Response code is 200 OK" time="0.012" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.012" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.012" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is 0 when feed is empty" time="0.012" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles Favorited by Username with auth" id="81e35f64-4b82-49e5-b209-be5671bba33a" timestamp="2022-04-04T10:51:23.018Z" tests="4" failures="0" errors="0" time="0.013">
+    <testcase name="Response code is 200 OK" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is 0 when feed is empty" time="0.013" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles by Tag" id="dfe88d54-7ec1-4dce-98bb-bad9ffd856b4" timestamp="2022-04-04T10:51:23.018Z" tests="5" failures="0" errors="0" time="0.013">
+    <testcase name="Response code is 200 OK" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articles&quot; property" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is 0 when feed is empty" time="0.013" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Create Article" id="07e7c7c7-c58d-4b07-b2b7-4b89efa0d532" timestamp="2022-04-04T10:51:23.018Z" tests="15" failures="0" errors="0" time="0.021">
+    <testcase name="Response contains &quot;article&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;title&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;slug&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;body&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;createdAt&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;createdAt&quot; property is an ISO 8601 timestamp" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;updatedAt&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;updatedAt&quot; property is an ISO 8601 timestamp" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;description&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;tagList&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;tagList&quot; property is an Array" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;author&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favorited&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favoritesCount&quot; property" time="0.021" classname="ConduitApiTests"/>
+    <testcase name="favoritesCount is an integer" time="0.021" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Single Article by slug" id="1d2453b9-3779-4d06-bc5f-190e77a87a8a" timestamp="2022-04-04T10:51:23.018Z" tests="15" failures="0" errors="0" time="0.022">
+    <testcase name="Response contains &quot;article&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;title&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;slug&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;body&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;createdAt&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;createdAt&quot; property is an ISO 8601 timestamp" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;updatedAt&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;updatedAt&quot; property is an ISO 8601 timestamp" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;description&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;tagList&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;tagList&quot; property is an Array" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;author&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favorited&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favoritesCount&quot; property" time="0.022" classname="ConduitApiTests"/>
+    <testcase name="favoritesCount is an integer" time="0.022" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Update Article" id="31f74968-3401-4cf1-93fd-55156612c885" timestamp="2022-04-04T10:51:23.018Z" tests="15" failures="0" errors="0" time="0.017">
+    <testcase name="Response contains &quot;article&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;title&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;slug&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;body&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;createdAt&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;createdAt&quot; property is an ISO 8601 timestamp" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;updatedAt&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;updatedAt&quot; property is an ISO 8601 timestamp" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;description&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;tagList&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;tagList&quot; property is an Array" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;author&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favorited&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favoritesCount&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="favoritesCount is an integer" time="0.017" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles with authentication / Favorite Article" id="8676f52c-12ca-4fb7-8e4f-048723ae2df7" timestamp="2022-04-04T10:51:23.018Z" tests="0" failures="0" errors="0" time="0.047"/>
+  <testsuite name="Articles with authentication / Unfavorite Article" id="3411d72c-ad94-4469-b025-635f98c879fa" timestamp="2022-04-04T10:51:23.018Z" tests="16" failures="0" errors="0" time="0.030">
+    <testcase name="Response contains &quot;article&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;title&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;slug&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;body&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;createdAt&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;createdAt&quot; property is an ISO 8601 timestamp" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;updatedAt&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;updatedAt&quot; property is an ISO 8601 timestamp" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;description&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;tagList&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;tagList&quot; property is an Array" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;author&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favorited&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favoritesCount&quot; property" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="favoritesCount is an integer" time="0.030" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;favorited&quot; property is true" time="0.030" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles / All Articles" id="aa14d785-00c7-487d-82d6-224448896055" timestamp="2022-04-04T10:51:23.018Z" tests="13" failures="0" errors="0" time="0.015">
+    <testcase name="Response code is 200 OK" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;createdAt&quot; property is an ISO 8601 timestamp" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;updatedAt&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;updatedAt&quot; property is an ISO 8601 timestamp" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;description&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;tagList&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;tagList&quot; property is an Array" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;author&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favorited&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favoritesCount&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="favoritesCount is an integer" time="0.015" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles / Articles by Author" id="c8d58d57-7852-40d2-8a33-835d4367f125" timestamp="2022-04-04T10:51:23.018Z" tests="18" failures="0" errors="0" time="0.015">
+    <testcase name="Response code is 200 OK" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articles&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;title&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;slug&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;body&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;createdAt&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;createdAt&quot; property is an ISO 8601 timestamp" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;updatedAt&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;updatedAt&quot; property is an ISO 8601 timestamp" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;description&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;tagList&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;tagList&quot; property is an Array" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;author&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favorited&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favoritesCount&quot; property" time="0.015" classname="ConduitApiTests"/>
+    <testcase name="favoritesCount is an integer" time="0.015" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles / Articles Favorited by Username" id="107c484e-a14c-4b62-a223-148d3b3600c5" timestamp="2022-04-04T10:51:23.018Z" tests="4" failures="0" errors="0" time="0.009">
+    <testcase name="Response code is 200 OK" time="0.009" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.009" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.009" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is 0 when feed is empty" time="0.009" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles / Articles by Tag" id="eef470ef-976d-464d-899c-4ce234343a0e" timestamp="2022-04-04T10:51:23.018Z" tests="18" failures="0" errors="0" time="0.011">
+    <testcase name="Response code is 200 OK" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articles&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;articlesCount&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="articlesCount is an integer" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;title&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;slug&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;body&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;createdAt&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;createdAt&quot; property is an ISO 8601 timestamp" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;updatedAt&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;updatedAt&quot; property is an ISO 8601 timestamp" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;description&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;tagList&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;tagList&quot; property is an Array" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;author&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favorited&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favoritesCount&quot; property" time="0.011" classname="ConduitApiTests"/>
+    <testcase name="favoritesCount is an integer" time="0.011" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Articles / Single Article by slug" id="7482da78-18f5-439d-9964-852d056073db" timestamp="2022-04-04T10:51:23.018Z" tests="15" failures="0" errors="0" time="0.017">
+    <testcase name="Response contains &quot;article&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;title&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;slug&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;body&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;createdAt&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;createdAt&quot; property is an ISO 8601 timestamp" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;updatedAt&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;updatedAt&quot; property is an ISO 8601 timestamp" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;description&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;tagList&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article's &quot;tagList&quot; property is an Array" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;author&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favorited&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="Article has &quot;favoritesCount&quot; property" time="0.017" classname="ConduitApiTests"/>
+    <testcase name="favoritesCount is an integer" time="0.017" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Comments / All Comments for Article" id="8a6a0f40-9035-4d5a-b40b-f35d6fc1ad78" timestamp="2022-04-04T10:51:23.018Z" tests="2" failures="0" errors="0" time="0.018">
+    <testcase name="Response code is 200 OK" time="0.018" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;comments&quot; property" time="0.018" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Comments / Create Comment for Article" id="5c79a3d5-c70a-4820-860c-aa03dd915df8" timestamp="2022-04-04T10:51:23.018Z" tests="0" failures="0" errors="0" time="0.027"/>
+  <testsuite name="Comments / Delete Comment for Article" id="eca64161-43c2-4e16-ba69-afa7d0352ab0" timestamp="2022-04-04T10:51:23.018Z" tests="0" failures="0" errors="0" time="0.011"/>
+  <testsuite name="Profiles / Profile" id="5c932209-b544-4694-946a-452d329388d6" timestamp="2022-04-04T10:51:23.018Z" tests="5" failures="0" errors="0" time="0.013">
+    <testcase name="Response code is 200 OK" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;profile&quot; property" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="Profile has &quot;username&quot; property" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="Profile has &quot;image&quot; property" time="0.013" classname="ConduitApiTests"/>
+    <testcase name="Profile has &quot;following&quot; property" time="0.013" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Profiles / Follow Profile" id="2c5693ae-39bf-4768-8804-560da8386422" timestamp="2022-04-04T10:51:23.018Z" tests="0" failures="0" errors="0" time="0.017"/>
+  <testsuite name="Profiles / Unfollow Profile" id="a2f44ffa-6cde-4546-9f8d-05678cb3f744" timestamp="2022-04-04T10:51:23.018Z" tests="6" failures="0" errors="0" time="0.014">
+    <testcase name="Response code is 200 OK" time="0.014" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;profile&quot; property" time="0.014" classname="ConduitApiTests"/>
+    <testcase name="Profile has &quot;username&quot; property" time="0.014" classname="ConduitApiTests"/>
+    <testcase name="Profile has &quot;image&quot; property" time="0.014" classname="ConduitApiTests"/>
+    <testcase name="Profile has &quot;following&quot; property" time="0.014" classname="ConduitApiTests"/>
+    <testcase name="Profile's &quot;following&quot; property is false" time="0.014" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Tags / All Tags" id="bfb20f68-8d05-4770-ba94-59ce968753d6" timestamp="2022-04-04T10:51:23.018Z" tests="3" failures="0" errors="0" time="0.009">
+    <testcase name="Response code is 200 OK" time="0.009" classname="ConduitApiTests"/>
+    <testcase name="Response contains &quot;tags&quot; property" time="0.009" classname="ConduitApiTests"/>
+    <testcase name="&quot;tags&quot; property returned as array" time="0.009" classname="ConduitApiTests"/>
+  </testsuite>
+  <testsuite name="Cleanup / Delete Article" id="0435b03b-3568-4f0a-a9fa-7137afe44ee0" timestamp="2022-04-04T10:51:23.018Z" tests="0" failures="0" errors="0" time="0.016"/>
+</testsuites>

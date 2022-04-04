@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Conduit API Tests" tests="31" time="0.000">
+  <testsuite name="Auth / Register" id="d9d8d1f3-a272-48be-a392-ed73ba456ad4" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Auth / Login" id="8fa75f0e-f837-489a-a3aa-1116be10fbde" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Auth / Login and Remember Token" id="55967e5b-ddac-422d-b963-17ececc14555" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Auth / Current User" id="bf17f6fa-cd60-4baf-b300-880559f54067" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Auth / Update User" id="f717420e-522f-4cd8-889d-7b3926087134" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Articles with authentication / Feed" id="e22c7924-107b-4d43-89e7-e4559c40e571" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles with authentication / Feed.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:6).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles with authentication / All Articles" id="6d43b955-3bc2-4f2d-b7bf-35a3c6470f15" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles with authentication / All Articles.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:7).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles with authentication / All Articles with auth" id="40bfda30-d422-4291-9b54-4b2f8ba0575c" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles with authentication / All Articles with auth.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:8).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles by Author" id="69bc1984-976d-4f4e-bc2f-83aeaeb9cc18" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles with authentication / Articles by Author.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:9).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles by Author with auth" id="f325a7a9-da19-4411-87f9-d8455b3f2595" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles with authentication / Articles by Author with auth.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles Favorited by Username" id="8164bec6-038a-4f59-9db9-b270580b268a" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles with authentication / Articles Favorited by Username.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:11).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles Favorited by Username with auth" id="9aaa8cdf-376c-4ad9-96bf-8b2ff6acc1aa" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles with authentication / Articles Favorited by Username with auth.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:12).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles with authentication / Articles by Tag" id="98199082-21a3-40dd-865c-8e094431fd23" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles with authentication / Articles by Tag.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:13).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles with authentication / Create Article" id="cdb9f931-b174-4897-ba5a-2b8c3c9a245c" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Articles with authentication / Single Article by slug" id="c2b5d6cd-863e-439f-bd41-9b27bc42bb00" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Articles with authentication / Update Article" id="68e05a38-e2f3-4448-9f5f-5973252d9887" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Articles with authentication / Favorite Article" id="6579e035-1775-4d5d-8478-cffdccd3c209" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Articles with authentication / Unfavorite Article" id="f6de7722-d0d2-4779-97c2-aad440732c7b" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Articles / All Articles" id="7baff1fb-34b9-4664-ae0c-f80b93639a57" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles / All Articles.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:19).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles / Articles by Author" id="0a076d65-0370-4fa3-9875-68015b8def19" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles / Articles by Author.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:20).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles / Articles Favorited by Username" id="85d34c6d-ae02-4e45-839f-a12824e05ddd" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles / Articles Favorited by Username.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:21).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles / Articles by Tag" id="ea03557b-a5db-4071-a475-c16c72d35ebc" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Articles / Articles by Tag.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:22).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Articles / Single Article by slug" id="b70f7fe4-fc66-4207-9922-1235f92aeb06" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Comments / All Comments for Article" id="d117e776-e520-4fcf-8abf-ac5aa59f516d" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Comments / All Comments for Article.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:24).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Comments / Create Comment for Article" id="399cfcc8-6912-4da9-9594-280af7cce27a" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Comments / Delete Comment for Article" id="2c845f2c-2f8d-411b-bd02-d38655b7850f" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Profiles / Profile" id="8ebdab2a-4ddd-411a-83b2-74cacfb64fb8" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Profiles / Profile.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:27).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Profiles / Follow Profile" id="d4b64357-3138-471c-91cd-ba9c6a25b743" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Profiles / Unfollow Profile" id="9782f2c6-fe3a-4962-89de-506024263852" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Profiles / Unfollow Profile.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:29).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Tags / All Tags" id="27e93985-294c-4e70-b1f3-48ca10b0cffb" timestamp="2022-04-04T10:09:10.912Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+    <testcase name="Response code is 200 OK" time="0.000" classname="ConduitApiTests">
+      <failure type="AssertionFailure" message="expected false to be truthy">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: dda3e595-02d7-bf12-2a43-3daea0970192.]]>
+        <![CDATA[Collection name: Conduit API Tests.]]>
+        <![CDATA[Request name: Tags / All Tags.]]>
+        <![CDATA[Test description: Response code is 200 OK.]]>
+        <![CDATA[Error message: expected false to be truthy.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be truthy
+   at Object.eval sandbox-script.js:1:30).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Cleanup / Delete Article" id="404da042-1308-4ed6-aac2-c2ddfb562624" timestamp="2022-04-04T10:09:10.912Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:3000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]></system-err>
+  </testsuite>
+</testsuites>
