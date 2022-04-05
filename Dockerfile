@@ -16,7 +16,13 @@ RUN npm install --only=production
 RUN cp -R node_modules prod_node_modules
 # install ALL node_modules, including 'devDependencies'
 RUN npm install
+RUN cp -R node_modules dev_node_modules
 
+FROM base AS dev
+ENV NODE_ENV=development
+RUN npm install -g nodemon && npm install
+COPY --from=dependencies  /usr/src/app/dev_node_modules ./node_modules
+COPY . .
 
 #
 # ---- Release ----

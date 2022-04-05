@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  mongo:
+    image: bitnami/mongodb
+    env_file: ./.env
+    restart: always
+    ports:
+      - $MONGODB_LOCAL_PORT:$MONGODB_DOCKER_PORT
+    volumes:
+      - db:/data/db
+    environment:
+      - MONGODB_ROOT_PASSWORD=password123
+      - MONGODB_DATABASE=real-app
+      - MONGODB_USERNAME=marwan
+      - MONGODB_PASSWORD=password123
+  app:
+    depends_on:
+      - mongo
+    build: 
+      context: .
+      target: dev
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    stdin_open: true
+    tty: true
+    command: npm start dev
+volumes:
+  db:
