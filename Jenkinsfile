@@ -77,7 +77,7 @@ pipeline {
     
             post {
                 success {
-                   sh 'newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json --reporters cli,junit --reporter-junit-export newman/realapp.xml'
+                   sh 'newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json --reporters cli,junit --reporter-junit-export "newman/realapp.xml" '
                    junit(testResults: 'newman/realapp.xml', allowEmptyResults : true)
                 }
             }
