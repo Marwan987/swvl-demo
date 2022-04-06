@@ -1,0 +1,52 @@
+# Default values for swvl-node.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 2
+
+image:
+  repository: marwanaf/real-app
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+imagePullSecrets: 
+  - name: regcred
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+
+service:
+  type: ClusterIP
+  target: 3000
+  port: 3000
+
+ingress:
+  enabled: true
+  annotations: 
+     kubernetes.io/ingress.class: nginx
+     nginx.ingress.kubernetes.io/rewrite-target: /$2
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: real-app
+            port:
+              number: 3000
+
+autoscaling:
+  enabled: false
+deployment:
+  envs:
+   - new
+   - name: MONGODB_URI
+     valueFrom:
+        secretKeyRef:
+            name: mongoconnection
+            key: mongo-connection 
+mongo:
+ uri: http://asad
+ enabled: true
+env: production
