@@ -22,7 +22,7 @@ FROM base AS dev
 ENV NODE_ENV=development
 RUN npm install -g nodemon && npm install
 COPY --from=dependencies  /usr/src/app/dev_node_modules ./node_modules
-COPY . .
+COPY --chown=node:node . .
 
 #
 # ---- Release ----
@@ -30,7 +30,7 @@ FROM base AS release
 # copy production node_modules
 COPY --from=dependencies  /usr/src/app/prod_node_modules ./node_modules
 # copy app sources
-COPY . .
+COPY --chown=node:node . .
 # expose port and define CMD
 EXPOSE 3000
 CMD node app.js
