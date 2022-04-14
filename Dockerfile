@@ -6,7 +6,7 @@ WORKDIR  /usr/src/app
 # copy project file
 COPY package.json .
 
-#
+
 # ---- Dependencies ----
 FROM base AS dependencies
 # install node packages
